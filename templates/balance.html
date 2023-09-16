@@ -1,0 +1,28 @@
+{%extends "base.html"  %}
+
+<hr>
+{% block title %}www.hqhair.com/balance-page{% endblock %}
+
+{% block content %}
+<hr>
+<h3 align="center" class="blue_text paletur_bg box01"> HQhair Warehouse Management System - Balance Page</h3></p>
+<hr>
+<form action="balance" method="POST">
+    <div align="center"class="container">
+    <div class="column col-2">
+        <div class="form-group">
+            <label class="form-label" for="qty-input">Amount</label>
+            <input class="form-input" type="number" id="qty-input" placeholder="0", name="Amount" >
+        </div>
+    <input type="submit" value="Submit">
+</form>
+   
+        <!-- Placeholder for forms and history -->
+        <div id="forms-blanace"></div>
+    </div>
+
+        </tr>
+        
+        </tr>
+            
+{% endblock %}

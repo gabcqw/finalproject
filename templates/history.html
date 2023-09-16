@@ -1,0 +1,37 @@
+{%extends "base.html"  %}
+
+<hr>
+{% block title %}www.hqhair.com/history-page{% endblock %}
+
+{% block content %}
+<hr>
+        <h3 align="center" class="blue_text paletur_bg box01"> HQhair Warehouse Management System - History Page </h3></p>
+        <hr>
+      </table>
+      <hr>
+      <table border="2" align="center" class="blue_text paletur_bg" >
+        <thead>
+          <tr>
+              <th>History Record</th>
+        </tr>
+        <tbody align="center">    
+          {%  for history in history %}
+          </tr>
+          <td>{{ history.id }} </td>
+        <td>{{ history.history_entry }} </td>
+          </tr>
+          {% endfor %}
+         
+          
+          <tbody align="center">
+      </table>
+
+        <!-- Placeholder for forms and history -->
+        <div id="forms-history"></div>
+    </div>
+
+        </tr>
+        
+        </tr>
+            
+{% endblock %}

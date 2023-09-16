@@ -1,0 +1,42 @@
+{%extends "base.html"  %}
+
+<hr>
+{% block title %}www.hqhair.com/sale-page{% endblock %}
+
+{% block content %}
+<hr>
+
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+  
+<h3 align="center" class="blue_text paletur_bg box01"> HQhair Warehouse Management System - Sales Form </h3></p>
+<hr>
+        <form action="sell-product" method="POST">
+            <div align="center"class="container">
+            <div class="column col-2">
+                <div class="form-group">
+                    <label class="form-label" for="input-example-1">Product Name</label>
+                    <input class="form-input" type="text" id="input-example-1" placeholder="Name" name="Product Name">
+                    <label class="form-label" for="price-input">Unit Price</label>
+                    <input class="form-input" type="number" id="input-example-1" placeholder="0" min="0" name="Unit Price" step="0.01">
+                    <label class="form-label" for="qty-input">Quantity</label>
+                    <input class="form-input" type="number" id="qty-input" placeholder="0" min="0" name="Quantity">
+                </div>
+            <input type="submit" value="Submit">
+        </form>
+   
+
+    </div>
+
+        </tr>
+        
+        </tr>
+            
+{% endblock %}

@@ -1,0 +1,64 @@
+{%extends "base.html"  %}
+
+<hr>
+{% block title %}www.hqhair.com/index{% endblock %}
+
+    <!-- {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} -->
+{% block content %}
+<h3 align="center" class="blue_text paletur_bg box01"> HQhair Warehouse Management System- Inventory </h3></p>
+     <hr>
+    </table>
+    <hr>
+    <table border="2" align="center" class="blue_text paletur_bg" >
+      <thead>
+        <tr>
+            <th>Account </th>
+      </tr>
+      <tbody align="center">    
+        </tr>
+        <td>{{ account.transaction }} </td>
+        </tr>
+        
+        <tbody align="center">
+    </table>
+
+<hr>
+<table border="2" align="center" class="blue_text paletur_bg" >
+    <thead>
+    <tr>
+        <th>Inventory Level Table -Product Name </th>
+        <th>Size /ML </th>
+        <th>Quantity </th>
+        <th>Unit Price/€ </th>
+    </tr>
+    </thead>
+    <tbody align="center">    
+            {%  for stock in stocks %}
+            </tr>
+            <td>{{ stock.id }} </td>
+            <td> {{ stock.name}} </td>
+            <td>{{ stock.size }} </td>
+            <td>{{ stock.quantity }} </td>
+            <td>{{ stock.unit_price }} </td>
+            <td>
+                <a href="/add-dedu/add/{{ stock.id }}/">+</a>/
+                <a href="/add-dedu/dedu/{{ stock.id }}/">-</a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+        <tbody align="center">
+    </table>
+
+        </tr>
+        
+        </tr>
+            
+{% endblock %}
